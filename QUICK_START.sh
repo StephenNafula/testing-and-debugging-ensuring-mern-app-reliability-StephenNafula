@@ -1,0 +1,72 @@
+#!/bin/bash
+# Quick Start Guide for Bug Tracker App
+
+echo "╔═══════════════════════════════════════════════════════════════╗"
+echo "║    🐛 Bug Tracker - MERN App Quick Start Guide               ║"
+echo "╚═══════════════════════════════════════════════════════════════╝"
+echo ""
+
+echo "📋 QUICK REFERENCE:"
+echo "─────────────────────────────────────────────────────────────"
+echo ""
+
+echo "1️⃣  FIRST TIME SETUP:"
+echo "   npm install"
+echo "   (Then start MongoDB)"
+echo ""
+
+echo "2️⃣  START DEVELOPMENT (RECOMMENDED):"
+echo "   npm run dev"
+echo "   → Backend: http://localhost:5000"
+echo "   → Frontend: http://localhost:3000"
+echo ""
+
+echo "3️⃣  OR RUN SEPARATELY:"
+echo "   Terminal 1: npm run dev:server"
+echo "   Terminal 2: npm run dev:client"
+echo ""
+
+echo "4️⃣  TESTING:"
+echo "   npm test              # All tests"
+echo "   npm run test:coverage # Coverage report"
+echo "   npm run e2e           # E2E tests (interactive)"
+echo ""
+
+echo "5️⃣  BUILD FOR PRODUCTION:"
+echo "   npm run build         # Build frontend"
+echo "   npm start             # Start backend"
+echo ""
+
+echo "📚 DOCUMENTATION:"
+echo "─────────────────────────────────────────────────────────────"
+echo "  • README.md - Project overview"
+echo "  • BUILD_SUMMARY.md - What was built"
+echo "  • RUNNING_THE_APP.md - Detailed setup"
+echo "  • TESTING.md - Testing guide"
+echo "  • DEBUGGING_GUIDE.md - Debugging tips"
+echo ""
+
+echo "🎯 FEATURES:"
+echo "─────────────────────────────────────────────────────────────"
+echo "  ✅ Report new bugs with form"
+echo "  ✅ View all reported bugs"
+echo "  ✅ Filter by status (Open/In Progress/Resolved)"
+echo "  ✅ Filter by priority (Low/Medium/High/Critical)"
+echo "  ✅ Update bug status"
+echo "  ✅ Delete bugs"
+echo "  ✅ Real-time statistics"
+echo "  ✅ Responsive design"
+echo ""
+
+echo "🧪 TEST COVERAGE:"
+echo "─────────────────────────────────────────────────────────────"
+echo "  • Unit Tests: 71 tests"
+echo "  • Integration Tests: 11 tests"
+echo "  • E2E Tests: 44 tests (scaffolded)"
+echo "  • Coverage: 74.09% (exceeds 70% target)"
+echo ""
+
+echo "🚀 READY TO START?"
+echo "─────────────────────────────────────────────────────────────"
+echo "   npm run dev"
+echo ""

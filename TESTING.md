@@ -32,10 +32,52 @@ Note: You must run `npm install` to install devDependencies listed in `package.j
 2. Add component tests under `client/src` alongside components or in `client/src/tests`.
 3. Static/asset imports are mocked with `client/src/tests/__mocks__/fileMock.js` and the `moduleNameMapper` mapping in `jest.config.js`.
 
-## End-to-end (E2E)
+## End-to-end (E2E) Testing with Cypress
 
-- We suggest Cypress (already referenced in `package.json` scripts). Install dev dependency and write E2E tests under `cypress/integration` or `cypress/e2e` depending on version.
-- E2E tests should point to a running instance of the app (use test environment and test data).
+E2E tests are located under `cypress/e2e/` and test full user flows (auth, CRUD operations, navigation, etc.).
+
+### Running E2E Tests
+
+```bash
+# Open Cypress interactive UI
+npm run e2e
+
+# Run E2E tests headless
+npm run e2e:run
+```
+
+### E2E Test Structure
+
+- `cypress/e2e/auth.cy.js` — Tests for registration, login, logout, password reset, and session management.
+- `cypress/e2e/posts.cy.js` — Tests for post CRUD operations (create, read, update, delete) and post interactions.
+- `cypress/support/e2e.js` — Custom Cypress commands (helpers for login, logout, creating posts, etc.).
+
+### Writing E2E Tests
+
+Each E2E test should:
+1. Set up test data (login as test user if needed)
+2. Navigate to a page or perform an action
+3. Verify behavior (assertions on UI, URL, API responses if mocked)
+4. Clean up if necessary
+
+Example:
+```javascript
+it('should successfully create a post', () => {
+  cy.login('user@example.com', 'password123');
+  cy.visit('/posts/create');
+  cy.get('[data-testid=post-title-input]').type('Test Post');
+  cy.get('[data-testid=post-content-textarea]').type('Content here');
+  cy.get('[data-testid=post-create-button]').click();
+  cy.url().should('include', '/posts');
+});
+```
+
+### Best Practices
+
+- Use `data-testid` attributes for element selection (more stable than selectors).
+- Avoid hardcoding wait times; use Cypress implicit waits and conditions.
+- Run E2E tests against a clean test database or use API fixtures/mocks for reproducibility.
+- For CI/CD, use `npm run e2e:run` and integrate with your pipeline.
 
 ## Debugging techniques included
 
