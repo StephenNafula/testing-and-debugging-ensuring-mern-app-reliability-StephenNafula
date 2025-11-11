@@ -80,8 +80,14 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 
 ## Resources
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+
+## Running tests
+
+See `TESTING.md` for detailed instructions on running unit, integration and end-to-end tests. Quick start:
+
+- Install dependencies: `npm install`
+- Run all Jest tests and collect coverage: `npm test`
+- Run server-only tests: `npm run test:server`
+- Run client-only tests: `npm run test:client`
+
+If you plan to run E2E tests, install Cypress and use `npm run e2e`.
